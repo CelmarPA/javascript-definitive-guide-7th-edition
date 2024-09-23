@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AaddEventListener()</title>
+</head>
+<body>
+    <h1>addEventListener()</h1>
+    <button id="mybutton">Click me</button>
+    <script>
+    let b = document.querySelector("#mybutton");
+    b.onclick = function() { console.log("Thanks for clicking me!")}
+    b.addEventListener("click", () => { console.log("Thanks again!"); });
+    </script>
+</body>
+</html>

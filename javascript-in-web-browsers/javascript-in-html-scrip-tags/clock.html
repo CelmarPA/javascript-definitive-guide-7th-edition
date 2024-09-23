@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Clock</title>
+    <style> /* A CSS stylesheet for the clock */
+    #clock { /* Sytles apply to element with id="clock" */
+        font: bold 24px sans-serif; /* Use a big bold font */
+        background: #ddf; /* on a light bluish-gray background. */
+        padding: 15px; /* Surround it with some space */
+        border: solid black 2px; /* and a solid black border */
+        border-radius: 10px; /* with rounded corners. */
+    }
+    </style> 
+</head>
+<body>
+    <!--
+        Web browsers display HTML documents. If you want a web browser
+        to execute JavaScript code, you must include (or reference) that code from an HTML document, and this is what the HTML <script> tag
+        does.
+
+        JavaScript code can appear inline within an HTML file between
+        <script> and </script> tags. Here, for example, is an HTML
+        file that includes a script tag with JavaScript code that dynamically updates one element of the document to make it behave like a digital clock:
+    -->
+    <h1>Digital Clock</h1> <!-- Display a title. -->
+    <span id="clock"></span> <!-- We will insert the time into this element. -->
+    <script src="scripts/digital_clock.js"></script>
+</body>
+</html>

@@ -1,0 +1,19 @@
+#TOC {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-bottom: 20px;
+  }
+  .TOCEntry {
+    margin-left: 10px;
+  }
+  .TOCLevel1 { /* Estilo para nível 1 (h2) */
+    font-weight: bold;
+  }
+  .TOCLevel2 { /* Estilo para nível 2 (h3) */
+    margin-left: 20px;
+  }
+  /* Estilo para o número da seção */
+  .TOCSectNum {
+    margin-right: 5px;
+  }
+  .TOCSectNum { display: none;}

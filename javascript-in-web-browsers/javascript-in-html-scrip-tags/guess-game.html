@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>I'm thinking of a number...</title>
+    <link rel="stylesheet" href="style/guess-game-style.css">
+</head>
+<body>
+    <h1 id="heading">I'm thinking of a number...</h1>
+
+    <!-- A visual representation of the numbers that have not been ruled out -->
+
+    <div id="container"><div id="range"></div></div>
+
+    <!-- Where the user enters their guess -->
+
+    <input id="input" type="text">
+
+    <!-- A button that reloads with no search string. Hidden until game ends. -->
+
+    <button id="playagain" hidden onclick="location.search='';">Play Again</button>
+
+    <script src="scripts/guess-game-script.js"></script>
+</body>
+</html>

@@ -1,0 +1,1 @@
+Este é um exemplo de texto para calcular o histograma de frequência de caracteres.

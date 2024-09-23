@@ -1,0 +1,18 @@
+/* These CSS style all apply to the SVG elements defined below */
+
+#clock { /* Styles for everything in the clock:  */
+    stroke: black; /* black lines */
+    stroke-linecap: round; /* with rounded ends */
+    fill: #ffe; /* on an off-white background */
+}
+
+#clock .face { stroke-width: 3; } /* Clock face outline */
+
+#clock .ticks { stroke-width: 2; } /* Lines that mark each hour */
+
+#clock .hands { stroke-width: 3; } /* How to draw the clock hands */
+
+#clock .numbers { /* How to draw the numbers */
+    font-family: sans-serif; font-size: 10; font-weight: bold;
+    text-anchor: middle; stroke: none; fill: black;
+}

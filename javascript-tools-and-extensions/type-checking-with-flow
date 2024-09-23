@@ -1,0 +1,79 @@
+// @flow
+// Using Type Annotations
+
+/**
+ * When you declare a JavaScript variable, you can add a Flow type 
+ * annotation to it by following the variable name with a colon and the 
+ * type:
+ */
+
+let message: string = "Hello world";
+let flag: boolean = false;
+let n: number = 42;
+
+function size1(s: string): number {
+    return s.length;
+}
+
+console.log(size1("[1,2,3]"));
+
+function size(s: ?string): number  {
+    // At this point in the code, s could be a string or null or undefined.
+    if (s === null || s === undefined) {
+        // In this block, Flow knows that s is null or undefined.
+        return -1;
+    } else {
+        // And in this block, Flow knows that s is a string.
+        return s.length;
+    }
+}
+
+// Class Type
+
+/**
+ * In addition to the primitive types that Flow knows about, it also 
+ * knows about all of JavaScript’s built-in classes and allows you to use 
+ * class name as types. The following function, for example, uses type 
+ * annotations to indicate that it should be invoked with one Date object 
+ * and one RegExp object:
+ */
+
+// @flow
+// Return true if the ISO representation of the specified date
+// matches the specified pattern, or false otherwise.
+// E.g: const isTodayChristmas = dateMatches(new Date(), /^\d{4}-12-25T/);
+
+export function dateMatches(d: Date, p: RegExp): boolean {
+    return p.test(d.toISOString());
+}
+
+/**
+ * If you define your own classes with the class keyword, those classes 
+ * automatically become valid Flow types. In order to make this work, 
+ * however, Flow does require you to use type annotations in the class. 
+ * In particular, each property of the class must have its type declared. 
+ * Here is a simple complex number class that demonstrates this:
+ */
+
+// @flow
+export default class Complex {
+    // Flow requires an extended class syntax that includes     type annotations
+    // for each of the properties used by the class.
+    i: number;
+    r: number;
+    static i: Complex;
+    constructor(r: number, i:number) {
+    // Any properties initialized by the constructor must     have Flow type
+    // annotations above.
+        this.r = r;
+        this.i = i;
+    }
+
+    add(that: Complex) {
+        return new Complex(this.r + that.r, this.i + that.i);
+    }
+}
+
+// This assignment would not be allowed by Flow if there was not a
+// type annotation for i inside the class.
+Complex.i = new Complex(0,1);
